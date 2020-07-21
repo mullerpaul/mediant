@@ -25,11 +25,12 @@ def main():
 	print_fraction("second fraction", args.fraction_b_num, args.fraction_b_dem)
 
 	# check for valid inputs no zero denominators and only positive integers
-	# TODO: figure out how to halt execution in these cases.
 	if args.fraction_a_dem == 0 or args.fraction_b_dem == 0:
 		print('error: denominators cannot be zero')
+		quit()
 	if args.fraction_a_dem < 0 or args.fraction_a_num < 0 or args.fraction_b_dem < 0 or args.fraction_b_num < 0:
 		print('no negative numbers')
+		quit()
 
 	result_num, result_dem = compute_mediant(args.fraction_a_num, args.fraction_a_dem, args.fraction_b_num, args.fraction_b_dem)
 	print_fraction("mediant", result_num, result_dem)

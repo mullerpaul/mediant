@@ -22,9 +22,9 @@ def main():
 	#print(f"target number {target}")
 
 	# check for valid input : decimal number between 0 and 1
-	# TODO: figure out how to halt execution in these cases.
 	if target < 0 or target > 1:
 		print('error: number must be between 0 and 1')
+		quit()
 
 	iteration = 1
 	lower_num = 0
